@@ -13,6 +13,18 @@
 <body>
     <div id="contenedor">            
             <div id="contenedorcentrado">
+            <div id="derecho">
+                    <div class="titulo">
+                        Bienvenido/a
+                    </div>
+                    <hr>
+                    <div class="pie-form">
+                        <div class="centrar-imagen">
+                            <img src="./public/img/logo.jpg"width="200" height="200">
+                        </div>
+                        
+                    </div>
+                </div>
                 <div id="login">
                     <form id="loginform" action="./controllers/controllersLogin.php" method="post">
                         
@@ -33,18 +45,7 @@
                     </form>
                                      
                 </div>
-                <div id="derecho">
-                    <div class="titulo">
-                        Bienvenido/a
-                    </div>
-                    <hr>
-                    <div class="pie-form">
-                        <div class="centrar-imagen">
-                            <img src="./public/img/logo.jpg"width="200" height="200">
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
     </div>
 </body>

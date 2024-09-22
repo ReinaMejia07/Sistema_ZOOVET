@@ -174,7 +174,7 @@
 									 <span class="material-icons">person_outline</span>
 									 Perfil
 									 </a></li>									 
-									 <li><a href="./views/logout.php">
+									 <li><a href="./views/logout.php" id="logoutButton">
 									 <span class="material-icons">logout</span>
 									 Salir
 									 </a></li>
@@ -337,6 +337,35 @@
             
         });
   </script>
+
+<script>
+        $(document).ready(function() {
+            $('#logoutButton').click(function(event) {
+                event.preventDefault(); // Evita cualquier acción por defecto
+
+                Swal.fire({
+                    title: '¿Desea cerrar sesión?',
+                    text: "¡Se cerrará tu sesión actual!",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Confirmar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = './views/logout.php'; // Ajusta la ruta si es necesario
+                    } else {
+                        Swal.fire(
+                            'Cancelado',
+                            'Tu sesión permanece activa',
+                            'info'
+                        );
+                    }
+                });
+            });
+        });
+    </script>
 
 
 
